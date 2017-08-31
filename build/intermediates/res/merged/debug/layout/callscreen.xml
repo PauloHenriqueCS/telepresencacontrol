@@ -1,0 +1,171 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:weightSum="5"
+android:background="#ffffff"
+android:keepScreenOn="true">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="51dp"
+    android:orientation="vertical"
+    android:background="#fffafafa"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/callState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Ligando"
+        android:textColor="@color/sinch_purple"
+        android:textSize="16sp"
+        android:textAllCaps="true"
+        />
+
+    <TextView
+        android:id="@+id/callDuration"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="0dp"
+        android:text="00:00"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/sinch_purple"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/remoteUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:text=""
+        android:textColor="@color/sinch_purple"
+        android:textSize="28sp"/>
+
+</LinearLayout>
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:padding="0dip"
+    android:layout_weight="5.13"
+android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <LinearLayout android:id="@+id/remoteVideo" android:layout_width="180dp"
+        android:layout_height="200dp" android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" android:orientation="horizontal"
+        android:layout_toStartOf="@+id/localVideo"
+        android:layout_toLeftOf="@+id/localVideo"
+        android:layout_alignParentBottom="true" />
+
+    <RelativeLayout android:id="@+id/localVideo" android:layout_width="180dp"
+        android:layout_alignParentRight="true" android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>
+
+<RelativeLayout
+    android:id="@+id/bottomPanel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/greyish">
+    <Button
+        android:id="@+id/hangupButton"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_end"
+        android:layout_centerHorizontal="false"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="100dp" />
+
+    <ToggleButton
+        android:text="MicroPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/recButton"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:theme="@style/AppTheme"
+        android:button="@android:drawable/ic_btn_speak_now"
+        android:layout_marginRight="10dp"
+        android:checked="true"
+        android:contextClickable="false"
+        android:cursorVisible="false"
+        android:background="@android:drawable/btn_default" />
+
+</RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="1">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/esquerda"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:background="@drawable/esquerda" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/cima"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:background="@drawable/cima"
+                android:layout_marginBottom="150dp"
+                android:layout_gravity="center_horizontal|top" />
+
+            <Button
+                android:id="@+id/stop"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:background="@drawable/stop"
+                android:layout_gravity="center" />
+
+            <Button
+                android:id="@+id/baixo"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:background="@drawable/baixo"
+                android:layout_marginTop="80dp"
+                android:layout_gravity="center_horizontal|bottom" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/direita"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:background="@drawable/direita"
+                android:layout_gravity="center_vertical" />
+        </FrameLayout>
+
+        <WebView
+            android:id="@+id/fragment_2_webview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

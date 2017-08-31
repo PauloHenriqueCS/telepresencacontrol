@@ -1,0 +1,162 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="#ffffff"
+    android:padding="0dip"
+    tools:context=".PlaceCallActivity"
+    android:keepScreenOn="true">>
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp" android:id="@+id/numberInputLayout"
+        android:layout_weight="0.87">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Ligar Para:"
+                android:textAllCaps="true"
+                android:id="@+id/textView"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/sinch_purple"
+                android:textSize="20sp"/>
+        <EditText
+                android:id="@+id/callName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="32sp"
+                android:padding="10dp"
+                android:textColor="@color/sinch_purple"
+                android:background="@drawable/inputbox"
+                android:inputType="textNoSuggestions">
+
+            <requestFocus/>
+        </EditText>
+
+    </LinearLayout>
+
+
+    <LinearLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/numberInputLayout"
+        android:paddingBottom="24dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal">
+        <TextView
+                android:id="@+id/infoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logado como: "
+                android:textAllCaps="true"
+                android:textColor="@color/sinch_purple"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                />
+
+        <TextView
+                android:id="@+id/loggedInName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/sinch_purple"
+                android:text="Someone"
+                android:textAllCaps="true"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold"/>
+    </LinearLayout>
+
+
+    <RelativeLayout android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentBottom="true"
+                  android:layout_centerHorizontal="true">
+
+        <Button
+            android:id="@+id/callButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button_call"
+            android:minHeight="56dp"
+            android:minWidth="132dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/stopButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/callButton"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/transparent"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/sinch_purple"
+            android:textAllCaps="true"
+            android:text="Parar Serviço"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:weightSum="1">
+
+<Button
+    android:id="@+id/esquerda"
+    android:layout_width="75dp"
+    android:layout_height="75dp"
+    android:background="@drawable/esquerda" />
+
+<FrameLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/cima"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="@drawable/cima"
+        android:layout_marginBottom="150dp"
+        android:layout_gravity="center_horizontal|top" />
+
+    <Button
+        android:id="@+id/stop"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="@drawable/stop"
+        android:layout_gravity="center" />
+
+    <Button
+        android:id="@+id/baixo"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:background="@drawable/baixo"
+        android:layout_marginTop="80dp"
+        android:layout_gravity="center_horizontal|bottom" />
+</FrameLayout>
+
+<Button
+    android:id="@+id/direita"
+    android:layout_width="75dp"
+    android:layout_height="75dp"
+    android:background="@drawable/direita"
+    android:layout_gravity="center_vertical" />
+
+<WebView
+    android:id="@+id/fragment_2_webview"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:visibility="invisible" />
+
+</LinearLayout>
+</LinearLayout>

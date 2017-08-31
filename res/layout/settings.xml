@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:background="@color/off_white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IP da placa wi-fi do arduino"
+        android:layout_marginTop="40dp"
+        android:textAllCaps="true"
+        android:id="@+id/textView" android:layout_gravity="center_horizontal"
+        android:textColor="@color/sinch_purple" android:textSize="20sp"
+        android:layout_marginBottom="4dp" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:id="@+id/iptext"
+        android:padding="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/inputbox"
+        android:inputType="phone"
+        android:layout_marginBottom="4dp"
+        android:textSize="32sp"
+        android:textColor="@color/sinch_purple" />
+
+    <TextView
+        android:text="IP Salvo:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:keepScreenOn="false"
+        android:id="@+id/ipSalvo"
+        android:textSize="18sp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp" />
+
+    <Button
+        android:id="@+id/bsalvar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Salvar"
+        android:minHeight="56dp"
+        android:minWidth="132dp"
+        android:background="@color/sinch_purple"
+        android:textColor="@color/off_white"
+        android:textSize="22sp"
+        android:textStyle="bold" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>
